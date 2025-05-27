@@ -128,13 +128,17 @@ section{
 .colors .option:nth-child(5){
   position: relative;
   background-color: #4A98F7;
-  margin-top: 25px; /* Добавляем место для иконки сверху */
+  
 }
+.row.colors {
+  padding-top: 25px; /* Чтобы заголовок "Палитра" и иконка не пересекались */
+}
+
 .dropper-icon {
   position: absolute;
-  top: -25px;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-110%); /* Центрируем по X и поднимаем на 50% своей высоты */
   width: 20px;
   height: 20px;
   pointer-events: none; /* чтобы клики проходили сквозь иконку к color-picker */
